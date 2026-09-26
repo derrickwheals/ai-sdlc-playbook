@@ -35,13 +35,13 @@ Arguments: $ARGUMENTS
 
 ## Enabling the plugin for everyone who clones the project
 
-If the user wants the plugin enabled automatically for this project, add this to `.claude/settings.json` (merge with any existing content, never overwrite it). Ask for the marketplace's GitHub `owner/repo` first:
+If the user wants the plugin enabled automatically for this project, add this to `.claude/settings.json`. Merge it with any existing content; never overwrite it. The marketplace repository is private, so anyone opening the project needs read access to it on GitHub:
 
 ```json
 {
   "extraKnownMarketplaces": {
     "ai-sdlc-playbook": {
-      "source": { "source": "github", "repo": "<owner>/ai-sdlc-playbook" }
+      "source": { "source": "github", "repo": "derrickwheals/ai-sdlc-playbook" }
     }
   },
   "enabledPlugins": {

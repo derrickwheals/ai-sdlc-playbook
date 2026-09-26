@@ -9,7 +9,7 @@
     {
       "name": "ai-sdlc",
       "description": "Skills and a verifier agent for running bug fixes, enhancements and features through committed intent, spec and plan artifacts with human approval gates.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./plugins/ai-sdlc",
       "category": "development"
     }

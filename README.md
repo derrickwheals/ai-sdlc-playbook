@@ -27,11 +27,15 @@ It adapts Anthropic's [AI-Native SDLC Playbook](https://claude.com/blog/the-ai-n
 Add the marketplace and install the plugin from inside Claude Code:
 
 ```
-/plugin marketplace add ~/GitHub/ai-sdlc-playbook
+/plugin marketplace add derrickwheals/ai-sdlc-playbook
 /plugin install ai-sdlc@ai-sdlc-playbook
 ```
 
-Once the repo is on GitHub, use `/plugin marketplace add <owner>/ai-sdlc-playbook`. Then, in each project:
+The repository is private, so Claude Code downloads it using your local git login for GitHub. Each machine, and anyone else installing it, needs read access to the repo.
+
+When developing the plugin itself, add the local checkout instead (`/plugin marketplace add ~/GitHub/ai-sdlc-playbook`) so edits are picked up without pushing.
+
+Then, in each project:
 
 ```
 /ai-sdlc:adopt
