@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-sdlc-playbook",
+  "description": "A lightweight, artifact-driven SDLC for Claude Code projects: intent.md → spec.md → plan.md → code + tests → PR + review findings.",
+  "owner": {
+    "name": "derrickwheals"
+  },
+  "plugins": [
+    {
+      "name": "ai-sdlc",
+      "description": "Skills and a verifier agent for running bug fixes, enhancements and features through committed intent, spec and plan artifacts with human approval gates.",
+      "version": "0.1.0",
+      "source": "./plugins/ai-sdlc",
+      "category": "development"
+    }
+  ]
+}

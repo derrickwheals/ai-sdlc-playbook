@@ -1,0 +1,19 @@
+# ── macOS system files ──────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ── Windows system files ────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ── Trash and temp ──────────────────────────────────────────────────
+.trash/
+*.tmp
+*.bak
+
+# ── Sync conflicts (iCloud, OneDrive, Dropbox) ───────────────────────
+*conflict*
+*.icloud
