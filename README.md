@@ -59,3 +59,7 @@ plugins/ai-sdlc/
   skills/<stage>/template.md        the artifact that stage writes
   skills/adopt/                     REVIEW.md and CLAUDE.md templates
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE).
