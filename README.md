@@ -31,8 +31,6 @@ Add the marketplace and install the plugin from inside Claude Code:
 /plugin install ai-sdlc@ai-sdlc-playbook
 ```
 
-The repository is private, so Claude Code downloads it using your local git login for GitHub. Each machine, and anyone else installing it, needs read access to the repo.
-
 When developing the plugin itself, add the local checkout instead (`/plugin marketplace add ~/GitHub/ai-sdlc-playbook`) so edits are picked up without pushing.
 
 Then, in each project:
