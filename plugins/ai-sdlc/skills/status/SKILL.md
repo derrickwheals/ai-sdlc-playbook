@@ -25,7 +25,8 @@ Filter: $ARGUMENTS
    | intent `accepted` (bug/enhancement) or spec `approved`, no approved plan | Plan | `/ai-sdlc:plan` or approve the draft plan |
    | plan `approved` or `in-progress` | Build | `/ai-sdlc:build` |
    | plan `done`, no `review.md` | Review | `/ai-sdlc:review` |
-   | `review.md` exists, intent has no `merged` | Awaiting merge | Merge the PR (human) |
+   | `review.md` exists, no `pr` | Review | Resolve findings and open the PR (`/ai-sdlc:review`) |
+   | `review.md` has `pr`, intent has no `merged` | Awaiting merge | Merge the PR (human) |
    | intent has `merged` | Done | None |
 
 3. Flag inconsistencies, such as a plan approved before its intent was accepted, a feature without a spec, uncommitted artifact changes (`git status`), or a `plan.md` marked `in-progress` whose branch doesn't exist.

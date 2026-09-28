@@ -63,7 +63,7 @@ The folder is the unit of work. Its artifacts' frontmatter holds the change's st
 A gate means the human reads the artifact and says yes. Then the skill:
 
 1. sets `status: accepted` or `status: approved` in the artifact's frontmatter, with the date;
-2. commits the artifact on its own, with a message such as `intent(2026-09-26-csv-import-drops-last-row): accept`.
+2. commits the artifact on its own (an intent's gate commit also carries its linked backlog item's update), with a message such as `intent(2026-09-26-csv-import-drops-last-row): accept`.
 
 The commit is the gate record. Rejections are committed too, with `status: rejected` and one line of reasoning, so the reason survives and the idea isn't raised again unknowingly.
 
@@ -102,7 +102,7 @@ Review findings feed back. When a review finds a mistake Claude is likely to rep
 These playbook parts are deliberately left out of v0.1. Each belongs in a later version or at organisational scale:
 
 - **Hooks that enforce gates**, for example blocking source edits when no approved `plan.md` exists for the current branch. This is the first addition worth making once the skills have settled.
-- **An eval suite for the agent configuration**: 20–50 real tasks with expected outcomes, run on changes to `CLAUDE.md`, skills or hooks. This matters for NTT, and is overkill for one person until the skills are shared across many projects.
+- **An eval suite for the agent configuration**: 20–50 real tasks with expected outcomes, run on changes to `CLAUDE.md`, skills or hooks. This matters at organisational scale, and is overkill for one person until the skills are shared across many projects.
 - **Deploy-stage permission tiers** and a production gate hook.
 - **The Maintain stage**: deterministic anomaly bands (`bands.yaml`) feeding new `intent.md` files.
 - **Managed settings** for regulated environments.

@@ -35,7 +35,7 @@ Arguments: $ARGUMENTS
 
 ## Enabling the plugin for everyone who clones the project
 
-If the user wants the plugin enabled automatically for this project, add this to `.claude/settings.json`. Merge it with any existing content; never overwrite it. The marketplace repository is private, so anyone opening the project needs read access to it on GitHub:
+If the user wants the plugin enabled automatically for this project, add this to `.claude/settings.json`. Merge it with any existing content; never overwrite it:
 
 ```json
 {

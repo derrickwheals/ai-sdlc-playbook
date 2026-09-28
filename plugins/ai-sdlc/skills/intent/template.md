@@ -6,6 +6,7 @@ track: bug | enhancement | feature
 status: draft
 raised: YYYY-MM-DD
 accepted:
+merged:
 backlog: <link to backlog item, or blank>
 ---
 

@@ -26,7 +26,7 @@ Input: $ARGUMENTS
 4. **Write the intent.** Create `docs/changes/<YYYY-MM-DD>-<slug>/intent.md` from `template.md` in this skill's directory. Use today's date and a slug of 3–6 lowercase hyphenated words. Set `status: draft`. Record unresolved questions under *Open questions*. Don't guess answers.
 
 5. **Gate: ask the user to accept or reject.** Show the intent and stop. Don't proceed until the user answers.
-   - **Accept:** set `status: accepted` and `accepted: <today>`, then commit only this file: `intent(<id>): accept`.
+   - **Accept:** set `status: accepted` and `accepted: <today>`, then commit this file, together with the backlog item update in step 6 if there is one: `intent(<id>): accept`.
    - **Reject:** set `status: rejected` and add one line of reasoning under *Decision*, then commit: `intent(<id>): reject`.
    - **Revise:** edit and ask again.
 

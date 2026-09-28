@@ -23,12 +23,12 @@ Change: $ARGUMENTS
 
 3. **Write** `docs/changes/<id>/review.md` from `template.md` in this skill's directory.
 
-4. **Resolve Important findings.** Fix each one (with a test if it's a behaviour bug), commit, and mark it `fixed` in `review.md`. If you believe a finding is wrong, mark it `disputed` with the reason and leave it for the human. Never mark your own dispute as accepted. Nits are fixed at your discretion, or left `open`.
+4. **Resolve Important findings.** Fix each one (with a test if it's a behaviour bug), commit, and mark it `fixed` in `review.md`. If you believe a finding is wrong, mark it `disputed` with the reason and leave it for the human. Never mark your own dispute as accepted. Nits are fixed at your discretion, or left `open`. If you changed any code, re-run every command under *Proof* in `plan.md`; all must pass. Record the commit they passed on as `reproven: <sha>` in `review.md`'s frontmatter. `head` stays the commit that was reviewed.
 
 5. **Feed back.** For each finding that reflects a mistake likely to recur in this project, propose one line for the *Things Claude gets wrong here* section of `CLAUDE.md`. Show the proposals and add only the ones the user agrees to.
 
 6. **Commit** `review.md` (and any `CLAUDE.md` update): `review(<id>): findings`.
 
-7. **Open the PR, after confirming with the user.** Pushing and opening a PR are visible outside this machine, so ask first. Then push the branch and run `gh pr create`. Use the intent's title, and a body that links the change folder's artifacts, summarises what changed, lists review findings still open or disputed, and gives the proof commands.
+7. **Open the PR, after confirming with the user.** Pushing and opening a PR are visible outside this machine, so ask first. Then push the branch and run `gh pr create`. Set `pr: <url>` in `review.md` and commit it: `review(<id>): open PR`. Use the intent's title, and a body that links the change folder's artifacts, summarises what changed, lists review findings still open or disputed, and gives the proof commands.
 
 8. **After merge** (whenever the user reports it): close the linked backlog item, if there is one, and set the intent's frontmatter `merged: <date>`.
